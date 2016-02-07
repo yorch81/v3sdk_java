@@ -78,6 +78,18 @@ public class V3SDK {
 		
 		return INSTANCE;
 	}
+
+	/**
+	 * Get Instance
+	 * 
+	 * @return V3SDK
+	 */
+	public static V3SDK getInstance () {
+		if (INSTANCE == null)
+			INSTANCE = new V3SDK("", "");
+		
+		return INSTANCE;
+	}
 	
 	/**
 	 * Get URL
