@@ -223,11 +223,14 @@ public class V3SDK {
 	 */
 	public JSONObject newObject(String entity, JSONObject v3Object) {
 		HttpClient httpclient = HttpClientBuilder.create().build();
-        
+               
         JSONObject retValue = new JSONObject();
         
         String url = this._url + entity + "?auth=" + this._key;
        
+        // Remove _id
+        v3Object.remove("_id");
+        
         try{
         	HttpPost httppost = new HttpPost(url);
         	StringEntity entJson = new StringEntity(v3Object.toString());
@@ -273,6 +276,9 @@ public class V3SDK {
         
         String url = this._url + entity + "/" + _id + "?auth=" + this._key;
         String ok = "{\"msg\":\"OK\"}";
+        
+        // Remove _id
+        v3Object.remove("_id");
         
         try{
         	HttpPut httpput = new HttpPut(url);

@@ -10,15 +10,14 @@ import org.json.JSONObject;
  *
  */
 public class App {
-    public static void main( String[] args ) {       
+    public static void main( String[] args ) { 
         V3SDK v3 = V3SDK.getInstance("https://v3-yorch.rhcloud.com/", "lYltuNtYYbYRFC7QWwHn9b5aH2UJMk1234567890");
-                
+    	
         JSONObject json = new JSONObject();
         json.put("field1", "myvalue");
         json.put("field2", 666);
         
         JSONObject result = v3.newObject("demo", json);
-        
         String id = V3SDK.getId(result);
         
         json = new JSONObject();
