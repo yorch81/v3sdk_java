@@ -135,7 +135,7 @@ public class V3SDK {
 	 * 
 	 * @param entity String Entity Name
 	 * @param _id    String Identifier
-	 * @return JSONObject String
+	 * @return JSONObject
 	 */
 	public JSONObject findObject(String entity, String _id) {
 		HttpClient httpclient = HttpClientBuilder.create().build();
