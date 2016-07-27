@@ -5,12 +5,39 @@ V3ctor WareHouse JAVA Sdk.
 
 ## Requirements ##
 * [Java](https://www.java.com/es/download/)
+* [Bintray Repository](https://bintray.com/yorch81/maven/V3SDK)
 
 ## Developer Documentation ##
 JavaDoc.
 
 ## Installation ##
-clone repository and execute mvn package
+Add JCenter Repository to pom.xml:
+
+~~~
+<repository>
+  <id>jcenter</id>
+  <url>http://jcenter.bintray.com </url>
+  <snapshots>
+    <enabled>true</enabled>
+    <updatePolicy>never</updatePolicy>
+    <checksumPolicy>warn</checksumPolicy>
+  </snapshots>
+   <releases>
+     <enabled>true</enabled>
+     <checksumPolicy>warn</checksumPolicy>
+  </releases>
+</repository>
+~~~
+
+Add maven dependency:
+
+~~~
+<dependency>
+  <groupId>net.yorch</groupId>
+  <artifactId>V3SDK</artifactId>
+  <version>1.1</version>
+</dependency>
+~~~
 
 ## Example ##
 ~~~
